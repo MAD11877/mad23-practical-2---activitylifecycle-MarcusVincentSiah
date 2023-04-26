@@ -3,6 +3,13 @@ package com.example.tempfile;
 import android.icu.lang.UProperty;
 
 public class User {
+    static int idStatic = 1;
+    public User(String name, String description){
+        id= idStatic;
+        this.name = name;
+        this.description = description;
+        idStatic += 1;
+    }
     public String name;
     public String getName(){
         return name;
